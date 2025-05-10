@@ -9,19 +9,19 @@ import { router } from "expo-router";
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  let navidateToTermsAgree = () => {
-    router.push("/(auth)/terms_agree");
+  let navigateToTermsAgree = () => {
+    router.push("/(auth)/terms_agree"); // navegar a la página de términos de uso
   };
 
   let loadingTimeout = () => {
     setIsLoading(true);
-    setTimeout(navidateToTermsAgree, 2000);
+    setTimeout(navigateToTermsAgree, 2000);
   };
 
   useEffect(() => {
     setTimeout(loadingTimeout, 2000);
   }, []);
-
+// safeareaview encuadra todo dentro de un area correcta de visualización
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}></View>
@@ -52,9 +52,9 @@ const styles = StyleSheet.create({
     flex: 1, // take up all the available space
     flexDirection: "column", // stack the children vertically
     backgroundColor: "yellow", // use a light yellow background
-    alignItems: "center", // center the children vertically
-    justifyContent: "center", // center the children horizontally
-    paddingVertical: moderateScale(70), // add some padding
+    alignItems: "center", // center the children horizontally because we're using `flexDirection: "column"
+    justifyContent: "center", // center the children horizontally; other options include `flex-start`, `flex-end`, `center`, `stretch`, and `space-between`
+    paddingVertical: moderateScale(70), // add some padding vertically between the beginning and end of the container
   },
   header: {},
   body: {
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   imageStyle: {
-    height: moderateScale(50),
+    height: moderateScale(50), // adjust the height of the image
     width: moderateScale(50),
   },
   logoStyle: {

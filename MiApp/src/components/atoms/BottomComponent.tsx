@@ -9,7 +9,7 @@ const BottomComponent = ({title}: any) => {
     </TouchableOpacity>
     );
 };
-
+//TouchableOpacity es un componente que se puede hacer clic en
 const styles = StyleSheet.create({
     bottomContainer: {
     backgroundColor: "green",

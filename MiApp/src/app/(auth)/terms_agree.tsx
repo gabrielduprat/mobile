@@ -13,8 +13,11 @@ const TermsAgree = () => {
             <Text style={styles.welcomeText}>Welcome to the app</Text>
             <Image source={imagePath.logo} style={styles.imageStyle} 
             resizeMode="contain" />
-            <Text style={styles.descriptionText}>Read Terms and Conditions</Text>
-            <View>
+            <Text style={styles.descriptionText}>
+              Read our <Text style={styles.linkText}>Privacy Policy.</Text>Tap "Agree 
+              and Continue" to accept the <Text style={styles.linkText}>Terms of service.</Text>
+              </Text>
+            <View style={{width:moderateScale(3000)}}>
                 <BottomComponent title={"Terms and Conditions"}/>
             </View>
             
@@ -33,8 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white", // use a light yellow background
     alignItems: "center", // center the children vertically
     justifyContent: "center", // center the children horizontally
-    paddingVertical: moderateScale(70), // add some padding
-    paddingHorizontal: moderateScale(30),   // add some padding
+    paddingVertical: moderateScale(70), // add some padding between the top and bottom of the container
+    paddingHorizontal: moderateScale(30),   // add some padding between the left and right of the container
   },
   header: {
     alignItems: "center",
@@ -78,6 +81,10 @@ const styles = StyleSheet.create({
   descriptionText: {
     fontSize: moderateScale(15),
     color: "black",
+  },
+  linkText: {
+    fontSize: moderateScale(15),
+    color: "blue",
   },
 });
 export default TermsAgree;
