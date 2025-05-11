@@ -15,7 +15,7 @@ const Auth = () => {
 
   let loadingTimeout = () => {
     setIsLoading(true);
-    setTimeout(navigateToTermsAgree, 2000);
+    //setTimeout(navigateToTermsAgree, 2000);
   };
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, // take up all the available space
     flexDirection: "column", // stack the children vertically
-    backgroundColor: "yellow", // use a light yellow background
+    backgroundColor: "white", // use a light yellow background
     alignItems: "center", // center the children horizontally because we're using `flexDirection: "column"
     justifyContent: "center", // center the children horizontally; other options include `flex-start`, `flex-end`, `center`, `stretch`, and `space-between`
     paddingVertical: moderateScale(70), // add some padding vertically between the beginning and end of the container

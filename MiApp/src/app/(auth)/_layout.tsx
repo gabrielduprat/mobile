@@ -7,6 +7,7 @@ const AuthLayout = () => {
   return (
   <Stack>
     <Stack.Screen name="index" options={{ headerShown: false }} />
+    <Stack.Screen name="terms_agree" options={{ headerShown: false }} />
   </Stack>
   );
 };

@@ -17,7 +17,7 @@ const TermsAgree = () => {
               Read our <Text style={styles.linkText}>Privacy Policy.</Text>Tap "Agree 
               and Continue" to accept the <Text style={styles.linkText}>Terms of service.</Text>
               </Text>
-            <View style={{width:moderateScale(3000)}}>
+            <View style={{width:moderateScale(300)}}>
                 <BottomComponent title={"Terms and Conditions"}/>
             </View>
             
@@ -81,10 +81,14 @@ const styles = StyleSheet.create({
   descriptionText: {
     fontSize: moderateScale(15),
     color: "black",
+    paddingVertical: moderateScale(70), // add some padding between the top and bottom of the container
+    paddingHorizontal: moderateScale(30),   // add some padding between the left and right of the container
   },
   linkText: {
     fontSize: moderateScale(15),
     color: "blue",
   },
 });
+
+
 export default TermsAgree;
